@@ -3,6 +3,9 @@ const invalidEmailAlert = document.getElementById('invalid');
 
 const validate = () => {
     const inputMail = document.getElementById('text').value;
+
+    document.getElementById('text').value = "";
+
     const regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
 
     if (regx.test(inputMail)) {
@@ -17,7 +20,5 @@ const validate = () => {
         return false;
     }
 
-    // clear input field
-    document.getElementById('email').value = "";
 
 }
